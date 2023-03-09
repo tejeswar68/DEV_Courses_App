@@ -10,6 +10,11 @@ import path from 'path';
 
 dotenv.config();
 const app= express();
+
+mongoose.connect(process.env.CONN_URL)
+    .then(() => console.log('connected to DB'))
+    .catch((err) => console.log('err.msg'));
+
 app.use(cors());
 app.use(bodyParser.json({limit: '30mb', extended: true}));
 app.use(bodyParser.urlencoded({limit: '30mb', extended: true}));
@@ -23,11 +28,6 @@ app.use('/api/learner', learnerRouter);
 // https://learnershub.herokuapp.com/api/course/
 app.use('/api/course', courseRouter);
 
-const PORT  = process.env.PORT||5003;
-// .then(() => app.listen(PORT, () => console.log(`Server running on port: ${PORT}`)))
-mongoose.connect(process.env.CONN_URL)
-    .then(() => console.log('connected to DB'))
-    .catch((err) => console.log('err.msg'));
 
 // Invalid-Path handler Middleware
 app.use((req, res, next) => {
@@ -38,6 +38,9 @@ app.use((req, res, next) => {
 app.use((err, req, res, next) => {
     res.send({message: 'Error Occurred', reason: `${err.message}`});
 })
+
+
+// .then(() => app.listen(PORT, () => console.log(`Server running on port: ${PORT}`)))
 
 const __dirname = path.resolve();
 //Serve Static assets if in production
@@ -50,6 +53,5 @@ if(process.env.NODE_ENV === 'production')
     });
 }
 
-
-
+const PORT  = process.env.PORT||5003;
 app.listen(PORT, () => console.log(`Server running on PORT ${PORT}`));
