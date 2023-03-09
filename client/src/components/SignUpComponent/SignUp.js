@@ -24,7 +24,7 @@ function SignUp() {
     console.log(userCredObj);
     const sendRequest = async () => {
       isLoading(true);
-      const res = await axios.post(`http://localhost:5003/api/${userType}/signup`,
+      const res = await axios.post(`https://learnershub.herokuapp.com/api/${userType}/signup`,
         {
           name: userCredObj.name,
           email: userCredObj.email,

@@ -10,7 +10,7 @@ function Design() {
   let [data, setData] = useState([])
 
   useEffect(()=>{
-    axios.get("http://localhost:5003/api/course/bytopic/Design")
+    axios.get("https://learnershub.herokuapp.com/api/course/bytopic/Design")
     .then(response=>setData (response.data.course))
     .catch(err=>console.log(err))
     console.log(data)

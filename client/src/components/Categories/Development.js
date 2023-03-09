@@ -10,7 +10,7 @@ function Development() {
   let [data, setData] = useState([])
 
   useEffect(()=>{
-    axios.get("http://localhost:5003/api/course/bytopic/Development")
+    axios.get("https://learnershub.herokuapp.com/api/course/bytopic/Development")
     .then(response=>setData (response.data.course))
     .catch(err=>console.log(err))
     console.log(data)

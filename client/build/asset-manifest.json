@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.15a7cef8.css",
+    "main.js": "/static/js/main.c2b63251.js",
+    "static/media/aicourse.png": "/static/media/aicourse.0019f0b231b099ebe098.png",
+    "static/media/ml_course.png": "/static/media/ml_course.34a51d25fafd120d4e37.png",
+    "static/media/health.png": "/static/media/health.04542bdded84f7384f93.png",
+    "static/media/billboard.jpg": "/static/media/billboard.348bff37d9126f93093f.jpg",
+    "static/media/Flogo.png": "/static/media/Flogo.80be19123674cbf2c456.png",
+    "static/media/Logo.png": "/static/media/Logo.80be19123674cbf2c456.png",
+    "index.html": "/index.html",
+    "main.15a7cef8.css.map": "/static/css/main.15a7cef8.css.map",
+    "main.c2b63251.js.map": "/static/js/main.c2b63251.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.15a7cef8.css",
+    "static/js/main.c2b63251.js"
+  ]
+}

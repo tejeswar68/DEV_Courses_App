@@ -23,7 +23,7 @@ function Login() {
   const onFormSubmit = (userCredObj) => {
     const sendRequest = async () => {
       isLoading(true);
-      const res = await axios.post(`http://localhost:5003/api/${userType}/login`,
+      const res = await axios.post(`https://learnershub.herokuapp.com/api/${userType}/login`,
         {
           email: userCredObj.email,
           password: userCredObj.password

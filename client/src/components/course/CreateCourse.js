@@ -14,7 +14,7 @@ const CreateCourse = () => {
     const onFormSubmit = (userCredObj) => {
         const sendRequest = async () => {
             isLoading(true);
-            const res = await axios.post("http://localhost:5003/api/course/addcourse",
+            const res = await axios.post("https://learnershub.herokuapp.com/api/course/addcourse",
               {
                 title : userCredObj.title,
                 topic : userCredObj.topic,

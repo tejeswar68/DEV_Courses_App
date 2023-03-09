@@ -12,7 +12,7 @@ export default function Profile() {
     
      const data =  async()=>
       {
-        await axios.get(`http://localhost:5003/api/${userType}/byid/${userId}`,).catch((err)=>console.log(err)).then((res)=>setData(res.data.user));
+        await axios.get(`https://learnershub.herokuapp.com/api/${userType}/byid/${userId}`,).catch((err)=>console.log(err)).then((res)=>setData(res.data.user));
       }
     data();
       
